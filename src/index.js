@@ -3,6 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Home from './routes/Home';
+import Explore from './routes/Explore';
+import Post from './routes/Post';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: '/explore',
+    element: <Explore />
+  },
+  {
+    path: '/post',
+    element: <Post />
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
